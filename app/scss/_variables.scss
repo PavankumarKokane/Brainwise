@@ -1,0 +1,40 @@
+:root {
+    // -----------Animation Time----------
+    --ani-s: all 0.2s 0s ease;
+    --ani-t: all 0.3s 0s ease;
+    --ani-f: all 0.5s 0s ease;
+    // -----------Opecity----------
+    --op-thr: 0.3;
+    --op-n: 0.9;
+    --op-e: 0.8;
+    --op-f: 0.5;
+}
+
+// -----------Animation Time----------
+$ani-s:var(--ani-s);
+$ani-t:var(--ani-t);
+$ani-f:var(--ani-f);
+// -----------Opecity----------
+$op-thr:var(--op-thr);
+$op-n:var(--op-n);
+$op-e:var(--op-e);
+$op-f:var(--op-f);
+// _____________________Font Veriable___________________
+$pf-font: 'Avenir-Regular';
+$sf-font: 'Roboto';
+$ar: 'Avenir-Regular';
+$ab: 'Avenir-Black';
+$ah: 'Avenir-Heavy';
+$am: 'Avenir-Medium';
+// _______________Font Type__________________
+
+$font-t: 100; //Thin (Hairline)
+$font-el: 200; //Extra Light (Ultra Light)
+$font-l: 300; //Light
+$font-r: 400; //Normal (Regular)
+$font-m: 500; //Medium
+$font-sb: 600; //Semi Bold (Demi Bold)
+$font-b: 700; //Bold
+$font-eb: 800; //Extra Bold (Ultra Bold)
+$font-black: 900; //Black (Heavy)
+$font-eblack: 950; // Extra Black (Ultra Black)

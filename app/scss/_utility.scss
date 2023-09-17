@@ -1,0 +1,177 @@
+.pc {
+    color: $pc;
+}
+
+.sc {
+    color: $sc;
+}
+.banner-title{
+    font-family: $ab;
+    @include typo(42px,null,$white,52px);
+}
+.btn{
+    font-family: $ah;
+    padding: 13px 28px;
+    border-radius: 6px;
+    border: unset;
+    &:first-child:active{
+        color: $white;
+        background-color: $orange;
+    }
+    &:not(.btn-check)+.btn:active{
+        color: $pc;
+        background-color: $white;
+    }
+}
+.btn-primary{
+    @extend .btn;
+    &-orange{
+        color: $white;
+        background-color: $orange;
+        &:hover,&:active,&:focus-visible{
+            color: $white!important;
+            background-color: $orange!important;
+        }
+    }
+    &-white{
+        color: $pc;
+        background-color: $white;
+        &:hover,&:active,&:focus-visible{
+            color: $pc!important;
+            background-color: $white!important;
+        }
+    }
+    &-tran{
+        color: $pc;
+        border: 1px solid $pc;
+        border-radius: 6px;
+        &:hover,&:active,&:focus-visible{
+            border: 1px solid $pc;
+            background-color: transparent!important;
+        }
+    }  
+}
+.sec-title{
+    @include typo(38px,$font-r,$pc,48px);
+    b{
+        font-family: $sf-font;
+    }
+}
+
+.overlay {
+	overflow: auto;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	display: none;
+}
+.popup {
+	max-width: 1000px;
+	width: 90%;
+	height: auto;
+	padding: 0px;
+	position: relative;
+	background: #fff;
+	margin: 50px auto 10px;
+	border-radius: 0px;
+    width: 50%;
+    border-radius: 10px 10px 10px 10px;
+}
+.close {
+	text-align: center;
+	background: #fff;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: -10px;
+	right: -10px;
+	cursor: pointer;
+	font-size: 26px;
+	z-index: 99;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	box-shadow: 1px 5px 6px 2px rgb(0,0,0,0.22);
+}
+.conatct-us-from {
+	padding: 20px;
+    .sec-title{
+        margin-bottom: 25px;
+        font-weight: 600;
+    }
+}
+.form-control-div{
+    position: relative;
+    padding-bottom: 20px;
+    input,textarea{
+        width: 100%;
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+    .submit-btn{
+        width: auto;
+        padding: 8px 30px;
+        border-radius: 6px;
+        color: $white;
+        background-color: $orange;
+        border: 1px solid $orange;
+    }
+    .wpcf7-not-valid-tip{
+        position: absolute;
+        bottom: -35px;
+        font-size: 10px;
+        left: 0px;
+    }
+}
+@media only screen and (max-width:1024px) {
+	.popup{
+		width: 95%;
+	}
+}
+
+@include max(d-767){
+    .banner-title{
+        font-family: $ab;
+        @include typo(28px,null,$white,38px);
+        text-align: center
+    }
+    .sec-title{
+        @include typo(28px,$font-r,$pc,38px);
+        text-align: center
+    }
+    footer{
+        .footer-main-div{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4,auto);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            .footer-logo-div { grid-area: 1 / 1 / 2 / 3; }
+            .quick-links { grid-area: 2 / 1 / 3 / 2; }
+            .site-map { grid-area: 2 / 2 / 3 / 3; }
+            .get-in-touch { grid-area: 3 / 1 / 4 / 3; }
+            .follow-us { grid-area: 4 / 1 / 5 / 3; }
+            .quick-links,.site-map{
+                margin-top: 25px;
+            }
+            .get-in-touch{
+                margin-top: 30px;
+            }
+            .follow-us{
+                margin-top: 40px;
+            }
+        }
+        .footer-copy{
+            .copyright-div{
+                flex-direction: column;
+            }
+        }
+    }
+}
